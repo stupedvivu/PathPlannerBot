@@ -1,5 +1,8 @@
 %this is an image processing code for conquest event, IIT, kharagpur
-%IIEST,Shibpur vivek, punyajoy, suprotik....
+%This code is written by VIVEK SHARMA..
+%IIEST,SHIBPUR...
+%GIVEN THRESHOLD VALUES MAY NOT WORK FOR YOUR ENVIROMENT...
+%CHANGE THE THRESHOLDS ACCORDINGLY..
 
 %=========initializing Bluetooth Module===================================%
 msgbox('initiating the connection with HC-05...');
@@ -9,8 +12,8 @@ fopen(arduino);
 
 
 %=========adding the image path and acquiring the first image=============%
-msgbox('first image acquired');
- path = 'C:\Users\vivu-pc\Desktop\fwood\';
+ msgbox('first image acquired');
+ path = 'C:\Users\vivu-pc\Desktop\fwood\';%path of the image feed coming from other computer...
  list = dir(path);
  [r,~] = size(list);
  imname = strcat('im',int2str(r-5),'.png');
@@ -41,7 +44,7 @@ stat_resource_centroid = regionprops(img_resource_labeled,'centroid');
 
 %%UNCOMMENT THE FOLLOWING PIECE OF STATEMENTS IF THE BOT IS NOT PLACED AT
 %%THE ORIGINAL CENTRE POSITION...
-% path = 'C:\Users\vivu-pc\Desktop\twnctr';
+% path = 'C:\Users\vivu-pc\Desktop\twnctr';%path of the image feed coming from other computer...
 % list = dir(path);
 % [r,~] = size(list);
 % filename = strcat(path,'twnctr',num2str(r-5),'.dat');
